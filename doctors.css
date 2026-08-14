@@ -1,0 +1,85 @@
+.doctors-full-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 26px;
+}
+
+.doc-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 10px 26px -18px rgba(15, 82, 87, 0.25);
+  border: 1px solid rgba(15, 82, 87, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.doc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.doc-avatar {
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--sky);
+  box-shadow: 0 8px 20px rgba(15, 82, 87, 0.12);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.doc-card:hover .doc-avatar {
+  transform: scale(1.05);
+  border-color: var(--teal-bright);
+}
+
+.doc-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.doc-card h4 {
+  font-size: 1.2rem;
+  color: var(--teal-deep);
+  margin-bottom: 6px;
+}
+
+.doc-card .role {
+  display: block;
+  color: var(--sun);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+}
+
+.doc-card .exp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  background: var(--sky-soft);
+  padding: 4px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(15, 82, 87, 0.08);
+}
+
+@media (max-width: 980px) {
+  .doctors-full-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .doctors-full-grid {
+    grid-template-columns: 1fr;
+  }
+}

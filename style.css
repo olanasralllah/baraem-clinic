@@ -1,0 +1,514 @@
+:root {
+  --sky: #eaf6f6;
+  --sky-soft: #f6fbfb;
+  --teal-deep: #0f5257;
+  --teal-bright: #2ec4b6;
+  --sun: #ff9f1c;
+  --apricot: #ffbf69;
+  --pink: #ff8fa3;
+  --ink: #17262a;
+  --ink-soft: #4a5d61;
+  --card: #ffffff;
+  --radius: 26px;
+  --radius-sm: 14px;
+  --shadow: 0 18px 40px -18px rgba(15, 82, 87, 0.28);
+  --container: 1160px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--sky-soft);
+  color: var(--ink);
+  font-family: "Tajawal", sans-serif;
+  line-height: 1.75;
+}
+
+h1,
+h2,
+h3,
+h4,
+.display {
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  color: var(--teal-deep);
+  margin: 0;
+  line-height: 1.3;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.wrap {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+section {
+  position: relative;
+}
+
+:focus-visible {
+  outline: 3px solid var(--sun);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  background: rgba(246, 251, 251, 0.9);
+  border-bottom: 1px solid rgba(15, 82, 87, 0.08);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  position: relative;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--teal-deep);
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  background: var(--teal-bright);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 10px rgba(46, 196, 182, 0.3);
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-weight: 700;
+  color: var(--teal-deep);
+}
+
+.nav-links a {
+  position: relative;
+  padding: 6px 2px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background: var(--sun);
+  border-radius: 3px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a.active {
+  color: var(--sun);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--sun);
+  color: #fff;
+  font-weight: 800;
+  padding: 13px 26px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-size: 1rem;
+  box-shadow: 0 12px 24px -10px rgba(255, 159, 28, 0.55);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 30px -10px rgba(255, 159, 28, 0.65);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--teal-deep);
+  border: 2px solid var(--teal-deep);
+  box-shadow: none;
+}
+
+.btn.small {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.burger-label {
+  display: none;
+  cursor: pointer;
+  padding: 6px;
+  z-index: 60;
+}
+
+.burger-label span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--teal-deep);
+  margin: 5px 0;
+  border-radius: 3px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.menu-toggle:checked ~ .burger-label span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .burger-label span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:checked ~ .burger-label span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.page-head {
+  padding: 56px 0 44px;
+  background:
+    radial-gradient(
+      500px 260px at 85% -20%,
+      rgba(255, 191, 105, 0.5),
+      transparent 70%
+    ),
+    linear-gradient(180deg, var(--sky) 0%, var(--sky-soft) 100%);
+  text-align: center;
+}
+
+.page-head .kicker {
+  color: var(--sun);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.page-head h1 {
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+}
+
+.page-head p {
+  color: var(--ink-soft);
+  margin-top: 14px;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.breadcrumb {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+.breadcrumb a {
+  color: var(--teal-deep);
+  font-weight: 700;
+}
+
+.kicker {
+  color: var(--sun);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section-head {
+  max-width: 640px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.section-head h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.section-head p {
+  color: var(--ink-soft);
+  margin-top: 14px;
+  font-size: 1.05rem;
+}
+
+.section-pad {
+  padding: 80px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.service-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: 0 10px 26px -18px rgba(15, 82, 87, 0.25);
+  border: 1px solid rgba(15, 82, 87, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+
+.icon-badge {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.service-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  margin: 0;
+}
+
+.doctors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.doc-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 26px;
+  text-align: center;
+  box-shadow: 0 10px 26px -18px rgba(15, 82, 87, 0.25);
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.doc-card h4 {
+  font-size: 1.05rem;
+}
+
+.doc-card .role {
+  color: var(--sun);
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.doc-card .exp {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  margin-top: 8px;
+}
+
+footer {
+  background: #0a3a3e;
+  color: rgba(255, 255, 255, 0.82);
+  padding: 56px 0 26px;
+  margin-top: 20px;
+}
+
+.foot-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+footer h4 {
+  color: #fff;
+  font-size: 1.05rem;
+  margin-bottom: 16px;
+}
+
+footer .brand {
+  color: #fff;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+}
+
+.foot-links {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.foot-links a {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.92rem;
+}
+
+.foot-links a:hover {
+  color: var(--apricot);
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.socials a {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.socials a:hover {
+  background: var(--sun);
+}
+
+.bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-top: 40px;
+  padding-top: 22px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+@media (max-width: 980px) {
+  .burger-label {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: var(--card);
+    box-shadow: var(--shadow);
+    border-radius: 0 0 20px 20px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease;
+  }
+
+  .nav-links a {
+    padding: 16px 28px;
+    border-bottom: 1px solid rgba(15, 82, 87, 0.08);
+  }
+
+  .menu-toggle:checked ~ .nav-links {
+    max-height: 400px;
+    opacity: 1;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .doctors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .services-grid,
+  .doctors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .foot-grid {
+    grid-template-columns: 1fr;
+  }
+}

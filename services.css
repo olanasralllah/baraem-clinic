@@ -1,0 +1,38 @@
+.full-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.service-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46, 196, 182, 0.12);
+  color: var(--teal-deep);
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.service-card:hover .service-icon {
+  background: var(--teal-bright);
+  color: #ffffff;
+}
+
+@media (max-width: 980px) {
+  .full-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .full-services-grid {
+    grid-template-columns: 1fr;
+  }
+}

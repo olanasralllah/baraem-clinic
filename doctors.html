@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فريق الأطباء | براعم</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&family=Tajawal:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- ملفات CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/doctors.css" />
+  </head>
+  <body>
+    <header>
+      <div class="wrap nav">
+        <a href="index.html" class="brand">
+          <span class="brand-icon">
+            <i class="fa-solid fa-seedling"></i>
+          </span>
+          <span>براعم</span>
+        </a>
+
+        <input type="checkbox" id="menuToggle" class="menu-toggle" />
+        <nav class="nav-links">
+          <a href="index.html">الرئيسية</a>
+          <a href="about.html">عن المركز</a>
+          <a href="services.html">الخدمات</a>
+          <a href="doctors.html" class="active">فريقنا</a>
+          <a href="contact.html">تواصل معنا</a>
+        </nav>
+        <label for="menuToggle" class="burger-label" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </label>
+
+        <a href="contact.html" class="btn">احجزوا موعد</a>
+      </div>
+    </header>
+
+    <section class="page-head">
+      <div class="wrap">
+        <span class="kicker">فريقنا</span>
+        <h1>خبرة طبية بقلب دافئ</h1>
+        <p>
+          نخبة من أطباء الأطفال متخصصين بالتعامل مع أصغر مرضانا وأكبر مخاوف
+          أهاليهم.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="wrap">
+        <div class="doctors-full-grid">
+          <div class="doc-card">
+            <div class="doc-avatar">
+              <img src="images/doc1.jpg" alt="د. لينا داوود" />
+            </div>
+            <h4>د. لينا داوود</h4>
+            <span class="role">استشارية طب أطفال</span>
+            <span class="exp"
+              ><i class="fa-regular fa-clock"></i> 16 سنة خبرة</span
+            >
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-avatar">
+              <img src="images/doc2.jpg" alt="د. عمر مطر" />
+            </div>
+            <h4>د. عمر مطر</h4>
+            <span class="role">أخصائي حديثي الولادة</span>
+            <span class="exp"
+              ><i class="fa-regular fa-clock"></i> 11 سنة خبرة</span
+            >
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-avatar">
+              <img src="images/doc4.jpg" alt="د. رنا سلامة" />
+            </div>
+            <h4>د. رنا سلامة</h4>
+            <span class="role">أخصائية تغذية أطفال</span>
+            <span class="exp"
+              ><i class="fa-regular fa-clock"></i> 9 سنوات خبرة</span
+            >
+          </div>
+
+          <div class="doc-card">
+            <div class="doc-avatar">
+              <img src="images/doc3.jpg" alt="د. يوسف كريم" />
+            </div>
+            <h4>د. يوسف كريم</h4>
+            <span class="role">أخصائي سلوك وتطور</span>
+            <span class="exp"
+              ><i class="fa-regular fa-clock"></i> 13 سنة خبرة</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad" style="background: var(--sky)">
+      <div class="wrap" style="text-align: center">
+        <h2>بدكم تحجزوا مع طبيب معيّن؟</h2>
+        <p style="color: var(--ink-soft); margin: 14px 0 26px">
+          احكولنا مين الدكتور المفضل عندكم ونحن رح نرتب الموعد.
+        </p>
+        <a href="contact.html" class="btn">احجزوا موعد</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="wrap foot-grid">
+        <div>
+          <div class="brand" style="margin-bottom: 14px">
+            <span class="brand-icon">
+              <i class="fa-solid fa-seedling"></i>
+            </span>
+            <span>براعم</span>
+          </div>
+          <p>مركز متخصص برعاية الأطفال، بنكبّر الابتسامة مع كل زيارة.</p>
+          <div
+            class="socials"
+            style="margin-top: 16px; display: flex; gap: 12px"
+          >
+            <a href="#" aria-label="فيسبوك"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a href="#" aria-label="انستغرام"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" aria-label="واتساب"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h4>روابط سريعة</h4>
+          <ul class="foot-links">
+            <li><a href="about.html">عن المركز</a></li>
+            <li><a href="services.html">الخدمات</a></li>
+            <li><a href="doctors.html">فريقنا</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>الخدمات</h4>
+          <ul class="foot-links">
+            <li><a href="services.html">كشف عام</a></li>
+            <li><a href="services.html">تطعيمات</a></li>
+            <li><a href="services.html">طوارئ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>تواصل</h4>
+          <ul class="foot-links">
+            <li><i class="fa-solid fa-phone"></i> 02-123-4567</li>
+            <li>
+              <i class="fa-solid fa-envelope"></i> hello@baraem-clinic.com
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="bottom-bar wrap">
+        © 2026 براعم لرعاية الأطفال. جميع الحقوق محفوظة.
+      </div>
+    </footer>
+  </body>
+</html>
